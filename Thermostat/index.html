@@ -15,10 +15,13 @@
             <div class="inner display">
                 <h3>Thermostat 🌡️</h3>
                 <div class="display-temp">
-                    <p class="temperature" id="temperature">20<span class="celcius">&#8451;</span></p>
+                    <p class="temperature" id="temperature"><span class="celcius">&#8451;</span></p>
+                </div>
+                <div class="display-usage">
+                    <p id="usage-color"><span id="usage"></span> usage</p>
                 </div>
                 <div class="display-psm">
-                    <p class="psm" id="psm"><span>Power Saving Mode: </span>ON</p>
+                    <p class="psm">Power Saving Mode: <span id="psm">ON</span></p>
                 </div>
             </div>
 
@@ -29,8 +32,8 @@
                 </div>
                 <br>
                 <div class="buttons-temp">
-                    <button class="temp-down">+</button>
-                    <button class="temp-up">-</button>
+                    <button class="temp-up">+</button>
+                    <button class="temp-down">-</button>
                     <button class="temp-reset">reset</button>
                 </div>
             </div>
@@ -38,6 +41,7 @@
     </main>
 
     <script src='src/js/thermostat.js'></script>
+    <script src='src/js/script.js'></script>
 
 </body>
 

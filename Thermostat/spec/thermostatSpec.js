@@ -68,11 +68,11 @@ describe('Thermostat', () => {
             for (let i = 0; i < 5; i += 1) {
                 thermostat.down();
             }
-            expect(thermostat.currentEnergyUsage()).toEqual('low usage');
+            expect(thermostat.currentEnergyUsage()).toEqual('low');
         });
 
         it("temp less than 18 & less than 25 deg is medium usage", () => {
-            expect(thermostat.currentEnergyUsage()).toEqual('medium usage');
+            expect(thermostat.currentEnergyUsage()).toEqual('medium');
         });
 
         it("temp greater 25 deg is high usage", () => {
@@ -80,7 +80,7 @@ describe('Thermostat', () => {
             for (let i = 0; i < 10; i += 1) {
                 thermostat.up();
             }
-            expect(thermostat.currentEnergyUsage()).toEqual('high usage');
+            expect(thermostat.currentEnergyUsage()).toEqual('high');
         });
     });
 

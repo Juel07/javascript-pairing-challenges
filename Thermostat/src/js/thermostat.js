@@ -30,19 +30,23 @@ class Thermostat {
     return this.powerSavingModeOn = false;
   }
 
+  switchOnPowerSavingMode() {
+    return this.powerSavingModeOn = true;
+  }
+
   resetTemperature() {
     return this.temperature = this.DEFAULT_TEMP;
   }
 
   currentEnergyUsage() {
     if (this.temperature < this.MEDIUM_USAGE_TEMP_LIMIT) {
-      return 'low usage';
+      return 'low';
     };
     if (this.temperature <= this.HIGH_USAGE_TEMP_LIMIT) {
-      return 'medium usage';
+      return 'medium';
     };
     if (this.temperature > this.HIGH_USAGE_TEMP_LIMIT) {
-      return 'high usage';
+      return 'high';
     };
   }
 
