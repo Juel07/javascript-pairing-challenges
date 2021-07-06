@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <title>Thermostat</title>
+</head>
+
+<body>
+    <main>
+        <section class="thermostat">
+            <div class="inner display">
+                <h3>Thermostat 🌡️</h3>
+                <div class="display-temp">
+                    <p class="temperature" id="temperature">20<span class="celcius">&#8451;</span></p>
+                </div>
+                <div class="display-psm">
+                    <p class="psm" id="psm"><span>Power Saving Mode: </span>ON</p>
+                </div>
+            </div>
+
+            <div class="outer buttons">
+                <div class="buttons-psm">
+                    <button class="psm-on">on</button>
+                    <button class="psm-off">off</button>
+                </div>
+                <br>
+                <div class="buttons-temp">
+                    <button class="temp-down">+</button>
+                    <button class="temp-up">-</button>
+                    <button class="temp-reset">reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src='src/js/thermostat.js'></script>
+
+</body>
+
+</html>
