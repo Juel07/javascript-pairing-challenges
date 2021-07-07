@@ -48,7 +48,7 @@ body {
   padding: 1em;
   margin: 2em 0;
   color: var(--white-color);
-  background-color: var(--primary-color2);
+  background: linear-gradient(145deg, #212121, #1c1c1c);
   border: 1em solid var(--primary-color);
   min-width: 400px;
   width: 100%;
@@ -94,7 +94,7 @@ button {
   border-radius: var(--border-rd);
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   transform: scale(0.9);
 }
 
@@ -124,14 +124,18 @@ label span {
   font-size: 18px;
 }
 
-input[type="text"] {
-  padding: 1em 0.7em;
-  border: none;
+input[type="text"], select {
+  padding: 0.5em 1em;
   outline: none;
+  border-radius: var(--border-rd);
+}
+
+select {
+  border: 2px solid var(--primary-color);
 }
 
 input[type="submit"] {
-  background-color: #400299;
+  background-color: var(--primary-color2);
   color: #fdfdfd;
   transition: 0.25s ease;
   border: none;
@@ -140,10 +144,6 @@ input[type="submit"] {
   padding: 0.5em 0.8em;
   cursor: pointer;
   font-size: 18px;
-}
-
-input[type="submit"]:hover {
-  transform: scale(1.1);
 }
 
 ::placeholder,

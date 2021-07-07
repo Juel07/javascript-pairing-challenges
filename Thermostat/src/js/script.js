@@ -7,6 +7,9 @@ psmOffBtn = document.querySelector('.psm-off');
 tempUpBtn = document.querySelector('.temp-up');
 tempDownBtn = document.querySelector('.temp-down');
 tempResetBtn = document.querySelector('.temp-reset');
+cityOption = document.querySelector('#city-select');
+cityTempDisplay = document.querySelector('#city-temp');
+searchCityBtn = document.querySelector('#search-btn')
 
 document.addEventListener("DOMContentLoaded", () => {
     const updateTemperature = () => {
@@ -45,6 +48,33 @@ document.addEventListener("DOMContentLoaded", () => {
         // psmDisplay.innerText = 'OFF'
         psmDisplay.className = 'psm-off-indicator'
         updateTemperature();
+    });
+
+
+    const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?';
+    const key = '40a3afdc8678463e5e54fb8e0059f90e';
+    let url;
+
+    const fetchWeather = (event) => {
+        event.preventDefault();
+
+        url = baseUrl + `q=${cityOption.value}&appid=${key}`
+
+        fetch(url)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                // console.log(data.main.temp)
+                const kelvin = data.main.temp
+                const celcius = kelvin - 273.15
+                cityTempDisplay.innerText = `The temperature is ${celcius.toFixed(2)}C in ${cityOption.value}.`
+            })
+            .catch(error => console.error(error));
+    }
+
+    searchCityBtn.addEventListener('click', (event) => {
+        fetchWeather(event)
     });
 
 });
