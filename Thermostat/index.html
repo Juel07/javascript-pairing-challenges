@@ -10,22 +10,22 @@
 </head>
 
 <body>
-    <main>
+    <main class="container">
         <section class="thermostat">
-            <div class="inner display">
-                <h3>Thermostat 🌡️</h3>
-                <div class="display-temp">
-                    <p class="temperature" id="temperature"><span class="celcius">&#8451;</span></p>
+            <div class="inner container">
+                <h3></h3>
+                <div class="display-temp row">
+                    <p class="temperature" id="temperature"></p><span class="celcius">&#8451;</span>
                 </div>
                 <div class="display-usage">
                     <p id="usage-color"><span id="usage"></span> usage</p>
                 </div>
                 <div class="display-psm">
-                    <p class="psm">Power Saving Mode: <span id="psm">ON</span></p>
+                    <p class="psm"><span class="psm-on-indicator" id="psm">&#9752;</span></p>
                 </div>
             </div>
 
-            <div class="outer buttons">
+            <div class="outer container">
                 <div class="buttons-psm">
                     <button class="psm-on">on</button>
                     <button class="psm-off">off</button>

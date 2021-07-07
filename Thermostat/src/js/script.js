@@ -35,13 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     psmOnBtn.addEventListener('click', () => {
         thermostat.switchOnPowerSavingMode()
-        psmDisplay.innerText = 'ON'
+        // psmDisplay.innerText = 'ON'
+        psmDisplay.className = 'psm-on-indicator'
         updateTemperature();
     });
 
     psmOffBtn.addEventListener('click', () => {
         thermostat.switchOffPowerSavingMode();
-        psmDisplay.innerText = 'OFF'
+        // psmDisplay.innerText = 'OFF'
+        psmDisplay.className = 'psm-off-indicator'
         updateTemperature();
     });
 
