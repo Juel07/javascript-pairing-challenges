@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/styles.css" />
+    <script src="https://kit.fontawesome.com/695d06a189.js" crossorigin="anonymous"></script>
     <title>Thermostat</title>
 </head>
 
@@ -14,9 +15,20 @@
         <section class="thermostat">
             <div class="inner container">
                 <h3></h3>
-                <div class="display-temp row">
-                    <p class="temperature" id="temperature"></p><span class="celcius">&#8451;</span>
+                <div class="display-temp">
+                    <div class="row">
+                        <p class="temperature" id="city-temp">--</p>
+                        <div class="col">
+                            <span class="celcius">&#8451;</span>
+                            <p class="display-city"></p>
+                        </div>
+                    </div>
+                    <div class="row space">
+                        <p><i class="fas fa-home"></i><span id="temperature"></span>&#8451;</p>
+                        <p><i class="fas fa-tint"></i><span id="humidity"></span>%</p>
+                    </div>
                 </div>
+
                 <div class="display-usage">
                     <p id="usage-color"><span id="usage"></span> usage</p>
                 </div>
@@ -25,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="outer container">
+            <div class="control container">
                 <div class="buttons-psm">
                     <button class="psm-on">on</button>
                     <button class="psm-off">off</button>
@@ -38,8 +50,8 @@
                 </div>
             </div>
 
-            <div class="weather container">
-                <label for="city-select">Choose a city:</label>
+            <div class="weather container row">
+                <label for="city-select">Set your city:</label>
 
                 <select name="city" id="city-select">
                     <option value="London">London</option>
@@ -48,12 +60,10 @@
                     <option value="New York">New York</option>
                     <option value="Sydney">Sydney</option>
                 </select>
-                <input type="submit" value="Search" id="search-btn"> 
-                <span id="city-temp"></span>
+                <input type="submit" value="Set" id="search-btn"> 
             </div>
         </section>
     </main>
-
     <script src='src/js/thermostat.js'></script>
     <script src='src/js/script.js'></script>
 

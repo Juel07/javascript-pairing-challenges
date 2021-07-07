@@ -1,4 +1,5 @@
 currTemp = document.querySelector('#temperature');
+cityHumidity = document.querySelector('#humidity');
 energyUsage = document.querySelector('#usage')
 energyUsageColor = document.querySelector('#usage-color')
 psmDisplay = document.querySelector('#psm');
@@ -9,6 +10,7 @@ tempDownBtn = document.querySelector('.temp-down');
 tempResetBtn = document.querySelector('.temp-reset');
 cityOption = document.querySelector('#city-select');
 cityTempDisplay = document.querySelector('#city-temp');
+cityDisplay = document.querySelector('.display-city');
 searchCityBtn = document.querySelector('#search-btn')
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -66,9 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(data => {
                 // console.log(data.main.temp)
-                const kelvin = data.main.temp
-                const celcius = kelvin - 273.15
-                cityTempDisplay.innerText = `The temperature is ${celcius.toFixed(2)}C in ${cityOption.value}.`
+                cityDisplay.innerText = cityOption.value.toUpperCase();
+                cityHumidity.innerText = data.main.humidity;
+                const kelvin = data.main.temp;
+                const celcius = kelvin - 273.15;
+                cityTempDisplay.innerText = ` ${celcius.toFixed(0)}`
             })
             .catch(error => console.error(error));
     }
