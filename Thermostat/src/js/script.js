@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?';
-    const key = '40a3afdc8678463e5e54fb8e0059f90e';
+    const key = '<your API key>';
     let url;
 
     const fetchWeather = (event) => {
